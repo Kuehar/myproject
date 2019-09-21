@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width" ,initial-scale="1.0">
+  <meta name="description" content="PFCバランスを測定し、あなたにとって最高の食生活を提案します。">
+    {% block meta_tag %}{% endblock %}
+
+  {# --- CSS  ---  #}
+  <link rel="stylesheet" type="text/css" href= "{% static 'vendors/css/normalize.css' %}">
+  <link rel="stylesheet" type="text/css" href= "{% static 'vendors/css/Grid.css' %}">
+  <link rel="stylesheet" type="text/css" href= "{% static 'vendors/css/ionicons.min.css' %}">
+  <link rel="stylesheet" type="text/css" href= "{% static 'vendors/css/animate.css' %}">
+  <link rel="stylesheet" type="text/css" href= "{% static 'resources/css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href= "{% static 'resources/css/datatable.css' %}">
+  <link rel="stylesheet" type="text/css" href= "{% static 'resources/css/queries.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    {% block css %}{% endblock %}
+
+
+    {% block title %}PFCBalancer{% endblock %}
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="row">
+        <a href="{% url 'top' %}" ><img src="{% static 'resources/img/logo_black1.png' %}" alt="PFCBalancer logo" class="logo"></a>
+        <a href="{% url 'top' %}"><img src="{% static 'resources/img/logo_black.png' %}" alt="PFCBalancer logo" class="logo-black" ></a>
+        <ul class="main-nav js--main-nav">
+          <li><a href="{% url 'blog' %}">Blog</a></li>
+          <li><a href="a">SIGN IN</a></li>
+          <li><a href="a">YOUR PFC</a></li>
+          <li><a href="{% url 'datatable' %">FOOD DATABASE</a></li>
+        </ul>
+        <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+      </div>
+    </nav>
+      {% block content %}
+      {% endblock %}
+  <footer>
+    <div class="row">
+      <div class="col span-1-of-2">
+        <ul class="footer-nav">
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="col span-1-of-2">
+        <ul class="social-links">
+          <li><a href="#"><i class="ion-social-twitter"></i></li>
+            <li><a href="#"><i class="ion-social-facebook"></i></li>
+              <li><a href="#"><i class="ion-social-googleplus"></i></li>
+                <li><a href="#"><i class="ion-social-instagram"></i></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row">
+              <p>
+                Copyright &copy; 2019 by PFCBalancer. All rights reserved.
+              </p>
+            </div>
+          </footer>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+          <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+          <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js'%}"></script>
+          <script type="text/javascript" src="{% static 'vendors/js/jquery.waypoints.min.js'%}"></script>
+          <script type="text/javascript" src="{% static 'resources/js/script.js'%}" ></script>
+        </body>
+        </html>
